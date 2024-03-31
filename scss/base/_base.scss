@@ -8,7 +8,7 @@ body {
 }
 a {
   color: $white;
-  transition: color o.2s ease-in;
+  transition: color 0.2s ease-in;
   
   &:hover {
     color: $accent;
