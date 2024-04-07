@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loft House</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css">
 </head>
 <body>
   <header class="header none1">
@@ -44,7 +45,7 @@
         </div>
       <div class="header__footer">
         <div class="text-right">
-          <a href="#section-map" class="info info--loc">Вул. Соборна 18</a>
+          <a href="#section-map" class="info info--loc">Вул. Тарасівська, 2/21</a>
         </div>
         <a href="tel:+380934555231" class="info info--tel">+38 (093)-45-55-231</a>
       </div>
@@ -113,7 +114,7 @@
           </div>
             <form action="" class="cta__form form">
               <input type="text" class="form__input" placeholder="Ваше ім'я">
-              <input type="text" class="form__input" placeholder="Ваш телефон">
+              <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон">
               <p class="form__privacy form__privacy--bottom">
                 *Ми нікому не передаємо ваші дані.<br> І не зберігаємо ваш номер у базу.
               </p>
@@ -125,7 +126,7 @@
     <section class="video none1">
       <h2 class="visually-hidden">Відео про ЖК Loft House</h2>
       <div class="container">
-        <a href="#!" class="video__link">
+        <a href="https://www.youtube.com/watch?v=bhJNL9JUsnY" data-youtubelightbox class="video__link">
           <img src="./img/video/play-button.svg" alt="video" class="video__icon">
           <img src="./img/video/video.jpg" alt="button" class="video__img">
         </a>
@@ -137,7 +138,9 @@
           <h2 class="title-2">Район на карті</h2>
         </div>
         <div class="section-map__map">
-          <div class="map" id="map"></div>
+          <div class="map" id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d69694.3963734773!2d30.507264773491197!3d50.427268685089935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cefa03b96d83%3A0x70ad936e9ef2a386!2z0LLRg9C70LjRhtGPINCi0LDRgNCw0YHRltCy0YHRjNC60LAsIDIvMjEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1712489963178!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -151,7 +154,7 @@
             *Ми нікому не передаємо ваші дані.<br> І не зберігаємо ваш номер у базу.
           </p>
           <input type="text" class="form__input" placeholder="Ваше ім'я">
-          <input type="text" class="form__input" placeholder="Ваш телефон">
+          <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон">
           <button type="submit" class="form__btn">Переглянути район</button>
         </form>
       </div>
@@ -203,6 +206,19 @@
       </div>
     </div>
   </footer>
+
+  <!-- Yootube Lightbox -->
+  <div id="youtubelightbox" class="youtubelightbox">
+    <div class="youtubelightbox__centeredchild">
+      <div class="youtubelightbox__videowrapper">
+        <div id="youtubelightboxPlayer"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./libs/phoneMask/mask.js"></script>
+  <script src="./libs/phoneMask/mask_list.js"></script>
+  <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
